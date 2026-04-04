@@ -1,0 +1,55 @@
+name: data_science
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Core
+  - python=3.11
+  - pip
+
+  # Data science base
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - statsmodels
+
+  # Visualización
+  - matplotlib
+  - seaborn
+  - plotly
+
+  # Jupyter ecosystem
+  - jupyterlab
+  - notebook
+  - ipykernel
+  - nbconvert
+
+  # IO y formatos
+  - pyarrow
+  - fastparquet
+  - openpyxl
+
+  # Geoespacial (MUY IMPORTANTE que venga de conda-forge)
+  - geopandas
+  - shapely
+  - pyproj
+  - rasterio
+  - fiona
+  - libgdal
+
+  # Utilidades
+  - tqdm
+
+  # Pip (solo lo que realmente no conviene en conda)
+  - pip:
+      - streamlit>=1.30.0
+      - protobuf==3.20.3
+      - altair<5
+      - contextily
+      - pingouin
+      - fastavro
+      - dbfread
+      - nbformat>=4.2.0
